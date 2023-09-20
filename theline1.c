@@ -1,17 +1,24 @@
 #include "shell.h"
-
+/**
+ * theline- read line every commend order
+ *
+ * Return: succesfull for c
+ */
 char *theline(void)
 {
 	char *c = NULL;
-	size t len = ©;
-	ssize t n;
-	if [fisatty(sTOIN_FILENO)]]
-		| write(sToouT_FILEND, "$ ", 2);
-	n = getline(&line, &len, stdin);
-	if (n = -1)
+	size_t len = 0;
+	ssize_t n;
+
+	if
+		(isatty(STDIN_FILENO))
+		write(STDOUT_FILENO, "$ ", 2);
+	n = getline(&c, &len, stdin);
+	if (n == -1)
 	{
-		free(line);
-		return (NULL);
-		¥
-			return (line);
+		free(c);
+		return ();
 	}
+
+	return (c);
+}
