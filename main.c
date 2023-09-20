@@ -9,7 +9,7 @@
 int main(int n, char **b)
 
 {
-	 char *c = NLL;
+	 char *c = NULL;
 
 	 char **order = NULL;
 
@@ -17,16 +17,17 @@ int main(int n, char **b)
 
 	 (void) n;
 
-	 hile(1)
+	while (1)
+	{
+		c = read_line();
 
-	 c = read_line();
-
-	if
+		if
 		 (c == NULL) /* that is the ctr + D */
 
-	return (store);
+		return (store);
 
-	order = tokenizer(c);
+		order = tokenizer(c);
 
-	store = _execute(order, b);
+		store = _execute(order, b);
+	}
 }
