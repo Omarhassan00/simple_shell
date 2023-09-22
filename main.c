@@ -19,7 +19,7 @@ int main(int n, char **b)
 
 	while (1)
 	{
-		c = read_line();
+		c = read();
 
 		if
 		 (c == NULL) /* that is the ctr + D */
@@ -29,7 +29,7 @@ int main(int n, char **b)
 		return (store);
 		 }
 	
-		order = tokenizer(c);
+		order = token(c);
 		if
 			(!order)
 			continue;
