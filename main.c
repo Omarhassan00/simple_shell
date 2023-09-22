@@ -13,7 +13,7 @@ int main(int n, char **b)
 
 	 char **order = NULL;
 
-	 int store;
+	 int store = 0;
 
 	 (void) n;
 
@@ -23,11 +23,17 @@ int main(int n, char **b)
 
 		if
 		 (c == NULL) /* that is the ctr + D */
-
+		 {
+			 if ( isatty ( STDIN_FILENO))
+				 write(STDOUT_FILENO, "\n" , 1);
 		return (store);
-
+		 }
+	
 		order = tokenizer(c);
-
+		if
+			(!order)
+			continue;
+		else
 		store = _execute(order, b);
 	}
 }
