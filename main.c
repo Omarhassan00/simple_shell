@@ -19,7 +19,7 @@ int main(int n, char **b)
 
 	while (1)
 	{
-		c = read();
+		c = read_line();
 
 		if
 		 (c == NULL) /* that is the ctr + D */

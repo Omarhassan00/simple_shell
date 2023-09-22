@@ -13,7 +13,7 @@
 #define DELIM "\t\n"
 
 extern char **come;
-char *read(void);
+char *read_line(void);
 char *token(char *c);
 int _execute(char **order , char **b);
 char *up(const char *pt);
