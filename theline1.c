@@ -4,7 +4,7 @@
  *
  * Return: succesfull for c
  */
-char *theline(void)
+char *read_line(void)
 {
 	char *c = NULL;
 	size_t len = 0;
