@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * _strcpy - copies a string
- * @dest: the destination
- * @src: the source
+ * _strcpy - container of the string
+ * @dest: the destination of string
+ * @src: the source to string
  *
- * Return: pointer to destination
+ * Return: destination
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -23,22 +23,25 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strdup - duplicates a string
- * @str: the string to duplicate
+ * _strdup - shoe twice the string
+ * @str: chande string to duplicate
  *
- * Return: pointer to the duplicated string
+ * Return: string
  */
 char *_strdup(const char *str)
 {
 	int length = 0;
 	char *ret;
 
-	if (str == NULL)
+	if
+		(str == NULL)
 		return (NULL);
-	while (*str++)
+	while
+		(*str++)
 		length++;
 	ret = malloc(sizeof(char) * (length + 1));
-	if (!ret)
+	if
+		(!ret)
 		return (NULL);
 	for (length++; length--;)
 		ret[length] = *--str;
@@ -46,10 +49,10 @@ char *_strdup(const char *str)
 }
 
 /**
- *_puts - prints an input string
- *@str: the string to be printed
+ *_puts - prints the string
+ *@str: string
  *
- * Return: Nothing
+ * Return: NULL
  */
 void _puts(char *str)
 {
@@ -65,23 +68,24 @@ void _puts(char *str)
 }
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * _putchar - writes a character
+ * @c: print
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: ALWAYS 1 on success and 0 when it's failed with error
  */
 int _putchar(char c)
 {
 	static int i;
 	static char buf[WRITE_BUF_SIZE];
 
-	if (c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
+	if
+		(c == BUF_FLUSH || i >= WRITE_BUF_SIZE)
 	{
 		write(1, buf, i);
 		i = 0;
 	}
-	if (c != BUF_FLUSH)
+	if
+		(c != BUF_FLUSH)
 		buf[i++] = c;
 	return (1);
 }
