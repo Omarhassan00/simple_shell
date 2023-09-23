@@ -8,7 +8,7 @@ char *path = NULL;
 for
   (index = 0; _strncmp(env[index], "PATH=", 5); index++);
 if (env[index] == NULL)
-return ();
+return (NULL);
 
 for
   (count = 5; env[index][var]; var++, count++);
