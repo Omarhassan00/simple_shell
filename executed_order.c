@@ -1,13 +1,11 @@
 #include "shell.h"
 
 int sh_exit(char **args);
-
 char *builtin_str[] = {"exit"};
-
 int (*builtin_func[])(char **) = {&sh_exit};
 
 /**
- * sh_num_builtins - size of builtin_str
+ * sh_num_builtins - size of builtin_st
  * Return: size
  */
 
@@ -53,6 +51,7 @@ int _fork_fun(char **arg, char **av, char **env, char *lineptr, int np, int c)
 			return (builtin_func[i](arg));
 	}
 	child_pid = fork();
+	
 	if (child_pid == 0)
 	{
 		if (execve(arg[0], arg, env) == -1)
