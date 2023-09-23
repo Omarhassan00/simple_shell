@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * main - entry point
- * @ac: arg count
- * @av: arg vector
+ * main - main proses for shell
+ * @ac: variable
+ * @av: iliment 
  *
- * Return: 0 on success, 1 on error
+ * Return: always 0 for success and did 1 when it error
  */
 int main(int ac, char **av)
 {
@@ -17,14 +17,18 @@ int main(int ac, char **av)
 		: "=r" (fd)
 		: "r" (fd));
 
-	if (ac == 2)
+	if
+		(ac == 2)
 	{
 		fd = open(av[1], O_RDONLY);
-		if (fd == -1)
+		if
+			(fd == -1)
 		{
-			if (errno == EACCES)
+			if
+				(errno == EACCES)
 				exit(126);
-			if (errno == ENOENT)
+			if
+				(errno == ENOENT)
 			{
 				_eputs(av[0]);
 				_eputs(": 0: Can't open ");
