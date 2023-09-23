@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * main - Main arguments functions
+ * main - Main arguments function
  * @ac: Count of arguments
  * @av: Arguments
  * @env: Environment
