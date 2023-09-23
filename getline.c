@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _getline_command -  GEts inputs
+ *_getline_command -  GEts inputs
  * Return: The input.
  */
 
