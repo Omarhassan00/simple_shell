@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * tokenize - tokenizes a stirng
- * @lineptr: what the user inputed
- * Return: a ptr to arr of ptrs
- */
+*tokenize - tokenizes stirng
+*@lineptr: user type
+*Return: ptr
+*/
 
 char **tokenize(char *lineptr)
 {
@@ -13,7 +13,8 @@ char **tokenize(char *lineptr)
 	size_t i = 0;
 	int count = 0;
 
-	if (lineptr == NULL)
+	if
+		(lineptr == NULL)
 		return (NULL);
 
 	for (i = 0; lineptr[i]; i++)
@@ -21,10 +22,12 @@ char **tokenize(char *lineptr)
 		if (lineptr[i] == ' ')
 			count++;
 	}
-	if ((count + 1) == _strlen(lineptr))
+	if
+		((count + 1) == _strlen(lineptr))
 		return (NULL);
 	commands = malloc(sizeof(char *) * (count + 2));
-	if (commands == NULL)
+	if
+		(commands == NULL)
 		return (NULL);
 
 	tokening = strtok(lineptr, " \n\t\r");
@@ -37,4 +40,3 @@ char **tokenize(char *lineptr)
 	commands[i] = NULL;
 	return (commands);
 }
-
