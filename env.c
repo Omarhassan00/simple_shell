@@ -1,10 +1,8 @@
 #include "shell.h"
 
 /**
-* _getenv - pritns env to standard output
-*
-* @env: enviroment
-*
+*_getenv - get env pri
+* @env: envir
 */
 
 void _getenv(char **env)
@@ -18,4 +16,3 @@ write(STDOUT_FILENO, "\n", 1);
 run++;
 }
 }
-
