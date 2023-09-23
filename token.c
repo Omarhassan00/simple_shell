@@ -16,10 +16,10 @@ char **tokenize(char *lineptr)
 			count++;
 	}
 	if ((count + 1) == _strlen(lineptr))
-		return ();
+		return (NULL);
 	commands = malloc(sizeof(char *) * (count + 2));
 	if (commands == NULL)
-		return ();
+		return (NULL);
 
 	tokening = strtok(lineptr, " \n\t\r");
 
