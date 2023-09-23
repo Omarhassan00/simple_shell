@@ -1,5 +1,5 @@
 #include "shell.h"
-char *_getline_command()
+char *_getline_command(NULL)
 {
 	char *input_string = NULL;
 	size_t input_size = 0;
@@ -10,7 +10,7 @@ char *_getline_command()
 		(getline(&input_string, &input_size, stdin) == -1)
 	{
 		free(input_string);
-		return ();
+		return (NULL);
 	}
 	return (input_string);
 }
