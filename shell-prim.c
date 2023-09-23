@@ -1,18 +1,9 @@
 #include "shell.h"
-
-/**
- * main - Main arguments functions
- * @ac: Count of arguments
- * @av: Arguments
- * @env: Environment
- * Return: _exit = 0.
- */
-
 int main(int ac, char **av, char **env)
 {
 	int pathValue = 0, status = 0, is_path = 0;
 	char *line = NULL, /**ptr to inpt*/ **commands = NULL; /**tokenized commands*/
-	(void)ac;
+	()ac;
 	while (1) /* loop until exit */
 	{
 		errno = 0;
@@ -36,14 +27,16 @@ int main(int ac, char **av, char **env)
 					free(line);
 					return (0);
 				}
-				if (is_path == 0)
+				if 
+					(is_path == 0)
 					free(commands[0]);
 			}
 			free(commands); /*free up memory*/
 		}
 		else
 		{
-			if (isatty(STDIN_FILENO))
+			if
+				(isatty(STDIN_FILENO))
 				write(STDOUT_FILENO, "\n", 1); /** Writes to standard output*/
 			exit(status);
 		}
