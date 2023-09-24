@@ -1,11 +1,9 @@
 #include "shell.h"
 
 /**
- * _myhistory - displays the history list, one command by line, preceded
- *              with line numbers, starting at 0.
- * @info: Structure containing potential arguments. Used to maintain
- *        constant function prototype.
- *  Return: Always 0
+ * _myhistory - show list and history
+ * @info: show info for elements
+ *  Return: Always 0 when success
  */
 int _myhistory(info_t *info)
 {
@@ -14,11 +12,10 @@ int _myhistory(info_t *info)
 }
 
 /**
- * unset_alias - sets alias to string
- * @info: parameter struct
- * @str: the string alias
+ * unset_alias - string alias
+ * @info: show info for elements
  *
- * Return: Always 0 on success, 1 on error
+ * Return: Always 0 when success and 1 when error
  */
 int unset_alias(info_t *info, char *str)
 {
@@ -26,7 +23,8 @@ int unset_alias(info_t *info, char *str)
 	int ret;
 
 	p = _strchr(str, '=');
-	if (!p)
+	if
+		(!p)
 		return (1);
 	c = *p;
 	*p = 0;
@@ -38,10 +36,10 @@ int unset_alias(info_t *info, char *str)
 
 /**
  * set_alias - sets alias to string
- * @info: parameter struct
- * @str: the string alias
+ * @info: show info for elements
+ * @str: a string
  *
- * Return: Always 0 on success, 1 on error
+ * Return: Always 0 when success and 1 when error
  */
 int set_alias(info_t *info, char *str)
 {
@@ -50,7 +48,8 @@ int set_alias(info_t *info, char *str)
 	p = _strchr(str, '=');
 	if (!p)
 		return (1);
-	if (!*++p)
+	if
+		(!*++p)
 		return (unset_alias(info, str));
 
 	unset_alias(info, str);
@@ -92,7 +91,8 @@ int _myalias(info_t *info)
 	char *p = NULL;
 	list_t *node = NULL;
 
-	if (info->argc == 1)
+	if
+		(info->argc == 1)
 	{
 		node = info->alias;
 		while (node)
